@@ -54,8 +54,8 @@ const totalCorrectAnswers = answers && answers.length > 0 ? answers.reduce((tota
         <p>Correct Answers: {totalCorrectAnswers}/{totalQuestions} ({percentageCorrect.toFixed(0)}%)</p>
         <p>Grade: {grade}</p>
       </div>
-      <div className="bg-white rounded-lg p-4 mb-4 overflow-y-auto shadow-md">
-        <h2 className="text-lg font-semibold mb-2">Questions and Answers</h2>
+      <div className="bg-gray-800 bg-opacity-75 rounded-lg p-4 mb-4 overflow-y-auto shadow-md">
+        <h2 className="text-lg font-semibold mb-2 text-white">Question and Answer Results</h2>
         <div className="grid grid-cols-1 gap-4">
           {answers && answers.map((answer, index) => (
             <div key={index} className="border p-4 rounded-md bg-gray-100">

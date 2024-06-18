@@ -93,6 +93,7 @@ export default function GameDynamic() {
             console.log("Timer reached 0. Handling no answer selection.");
             clearInterval(interval);
             noAnswerHandled = true;
+          
             handleNoAnswerSelection();
             return 0; // Stop at 0
           }
@@ -128,6 +129,7 @@ export default function GameDynamic() {
           "Random incorrect choice selected for no answer",
           randomIncorrectChoice
         );
+        
         handleAnswerSelection(randomIncorrectChoice, true);
         setAnswerHandled(true);
       } else {
@@ -182,7 +184,7 @@ export default function GameDynamic() {
         }
       }, 2500);
     },
-    [answerHandled, currentQuestionIndex, questions, ]
+    [answerHandled, currentQuestionIndex, questions, answers]
   );
 
   const handleEndOfGame = useCallback(() => {
